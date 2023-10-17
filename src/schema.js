@@ -54,7 +54,7 @@ input ProductCategoryInput {
         price: [Float]
         until: String
         sku: String
-        stock: Int
+        stock: String
         ratings: Float
         reviews: Int
         sale_count: Int
@@ -210,13 +210,15 @@ input ProductCategoryInput {
     }
 	
 	input ProductInput {
+        id: Int
         name: String
         slug: ID
         short_description: String
-        price: [Float]
+        price: Float
+        sale_price: Float
         until: String
         sku: String
-        stock: Int
+        stock: String
         ratings: Float
         reviews: Int
         sale_count: Int
