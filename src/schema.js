@@ -27,7 +27,6 @@ input ColorInput {
 }
 
 input ProductTagInput {
-    id: Int!
     name: String
     slug: ID
 }
