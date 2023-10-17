@@ -41,6 +41,7 @@ input ProductBrandInput {
 input ProductCategoryInput {
     id: Int!
     name: String
+    parent: String
     slug: ID
 }
 
@@ -111,6 +112,7 @@ input ProductCategoryInput {
 		_id: ID!
         id: Int!
         name: String
+        parent: String
         slug: ID
     }
 
