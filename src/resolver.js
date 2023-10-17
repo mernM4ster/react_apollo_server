@@ -302,10 +302,12 @@ const resolvers = {
     },
     createProductCategory: async (_, { input }, { db }) => {
       try {
+        const length = (await db.collection('Categories').find().toArray()).length;
         const result = await db.collection('Categories').insertOne(input);
+      
 
         return {
-          id: result.insertedId,
+          id: length + 1,
           ...input,
         };
       } catch (error) {
